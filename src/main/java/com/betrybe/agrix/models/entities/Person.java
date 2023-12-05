@@ -1,7 +1,7 @@
-package com.betrybe.agrix.ebytr.staff.entity;
+package com.betrybe.agrix.models.entities;
 
 
-import com.betrybe.agrix.ebytr.staff.security.Role;
+import com.betrybe.agrix.security.Role;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -10,22 +10,18 @@ import jakarta.persistence.Id;
 import java.util.Objects;
 
 /**
- * Class representing a person.
+ * Person.
  */
 @Entity
 public class Person {
-
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Long id;
-
   @Column(unique = true)
   private String username;
-
   private String password;
-
   private Role role;
-
+  
   public Person() {
   }
 
@@ -75,4 +71,3 @@ public class Person {
         && Objects.equals(role, person.role);
   }
 }
-

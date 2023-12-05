@@ -26,9 +26,53 @@
   <dependencies>
 
     <!-- Adicione suas dependências aqui, mas não altere as que já estão configuradas -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>javax.persistence</groupId>
+            <artifactId>javax.persistence-api</artifactId>
+            <version>2.2</version>
+        </dependency>
 
-
-
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-devtools</artifactId>
+            <scope>runtime</scope>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>com.mysql</groupId>
+            <artifactId>mysql-connector-j</artifactId>
+            <scope>runtime</scope>
+        </dependency>
+        
+        <dependency>
+    		<groupId>org.springframework.boot</groupId>
+    		<artifactId>spring-boot-starter-security</artifactId>
+    		<version>3.1.1</version>
+		</dependency>
+		<dependency>
+    		<groupId>org.springframework.security</groupId>
+    		<artifactId>spring-security-test</artifactId>
+    		<version>6.1.1</version>
+    		<scope>test</scope>
+		</dependency>
+		
+		<dependency>
+		  <groupId>com.auth0</groupId>
+		  <artifactId>java-jwt</artifactId>
+		  <version>4.4.0</version>
+		</dependency>
 
     <!-- Spring Boot -->
 
@@ -167,7 +211,7 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-checkstyle-plugin</artifactId>
-        <version>3.3.0</version>
+        <version>3.2.2</version>
         <configuration>
           <configLocation>google_checks.xml</configLocation>
           <failsOnError>true</failsOnError>
